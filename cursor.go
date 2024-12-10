@@ -1,9 +1,15 @@
 package tea
 
-import "image"
+import (
+	"image"
+
+	"github.com/charmbracelet/x/input"
+)
 
 // CursorPositionMsg is a message that represents the terminal cursor position.
-type CursorPositionMsg image.Point
+type CursorPositionMsg struct {
+	input.CursorPositionEvent
+}
 
 // CursorStyle is a style that represents the terminal cursor.
 type CursorStyle int
